@@ -42,3 +42,12 @@ Route::post('/listaex1', function(Request $request){
     $media = ($nota1 + $nota2 + $nota3) / 3;
     return view('lista.ex1', compact('media'));
 });
+Route::get('/ex2',function(){
+    return view('lista.ex2');
+});
+
+Route::post('/listaex2', function(Request $request){
+    $temp = floatval($request ->input('temp'));
+    $convertida = $temp + 32;
+    return view('lista.ex2', compact('convertida'));
+});
