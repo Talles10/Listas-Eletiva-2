@@ -51,3 +51,24 @@ Route::post('/listaex2', function(Request $request){
     $convertida = $temp + 32;
     return view('lista.ex2', compact('convertida'));
 });
+
+Route::get('/ex3',function(){
+    return view('lista.ex3');
+});
+
+Route::post('/listaex3', function(Request $request){
+    $temp = floatval($request ->input('temp'));
+    $convertida = $temp - 32;
+    return view('lista.ex3', compact('convertida'));
+});
+
+Route::get('/ex4', function(){
+    return view('lista.ex4');
+});
+
+Route::post('listaex4', function(Request $request){
+    $base_tri = floatval($request ->input('base'));
+    $altura_tri = floatval($request ->input('altura'));
+    $area = ($base_tri * $altura_tri) / 2;
+    return view('lista.ex4', compact('area'));
+});
