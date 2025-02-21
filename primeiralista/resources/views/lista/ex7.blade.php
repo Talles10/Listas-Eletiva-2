@@ -11,6 +11,6 @@
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 @isset($perimetro)
-    <p>A area da circunferencia é {{$perimetro}}</p>
+    <p>O perímetro da circunferencia é {{$perimetro}}</p>
 @endisset
 @endsection
