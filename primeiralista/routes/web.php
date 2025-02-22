@@ -145,3 +145,18 @@ Route::post('listaex11', function(Request $request){
     $IMC =  ($peso /$altura ** 2);
     return view('lista.ex11', compact('IMC'));
 });
+
+Route::get('/ex12', function(){
+    return view('lista.ex12');
+});
+
+Route::post('listaex12', function(Request $request){
+    $preco = $request -> input('preco');
+    $desc = $request -> input('desc');
+
+    if($preco > 0 && $desc >= 0 && $desc <= 100){
+        $vlrdesc = ($preco * $desc) / 100;
+        $total = $preco - $vlrdesc;
+        return view('lista.ex12', compact('total'));
+    }
+});

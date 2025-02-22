@@ -10,5 +10,6 @@
     <li><a href="/ex9">Exercício 9</a></li>
     <li><a href="/ex10">Exercício 10</a></li>
     <li><a href="/ex11">Exercício 11</a></li>
+    <li><a href="/ex12">Exercício 12</a></li>
 
 </ul>
