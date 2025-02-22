@@ -2,6 +2,7 @@
 
 @section('conteudo')
 <form method="post" action = 'listaex12'>
+    @csrf
                         
 <div class="mb-3">
     <label for="preco" class="form-label">Insira o valor que será determinado o preço </label>
