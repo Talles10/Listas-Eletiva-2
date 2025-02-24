@@ -171,7 +171,8 @@ Route::post('/listaex13',function(Request $request){
     $per = floatval($request -> input('per'));
     $calculo_juros = $juros / 100;
     $total = $cap * $calculo_juros * $per;
-    return view('lista.ex13', compact('total'));
+    $montante = $cap + $total;
+    return view('lista.ex13', compact('total') , compact('montante'));
 });
 
 Route::get('/ex14', function(){
@@ -179,12 +180,13 @@ Route::get('/ex14', function(){
 });
 
 Route::post('/listaex14', function(Request $request){
-    $cap = floatval($request -> input('cap'));
-    $taxa = floatval($request -> input('juros'));
-    $per = floatval($request -> input('per'));
+    $cap = floatval($request->input('cap'));
+    $taxa = floatval($request->input('taxa'));
+    $per = floatval($request->input('per'));
     $porcentagem = $taxa / 100;
-    $total = ($cap * (1 + $taxa)** $per);
-    return view('lista.ex14', compact('total'));
+    $montante = $cap * pow((1 + $porcentagem), $per);
+    $juros = $montante - $cap;
+    return view('lista.ex14', compact('montante', 'juros'));
 });
 
 Route::get('/ex15', function(){
@@ -196,5 +198,5 @@ Route::post('/listaex15', function(Request $request){
     $horas = $dias * 24;
     $min = $horas * 60;
     $seg = $min * 60;
-    return view('/lista.ex15', compact('horas , min , seg'));
+    return view('/lista.ex15', compact('dias','horas' , 'min' , 'seg'));
 });

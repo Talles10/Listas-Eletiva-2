@@ -21,7 +21,10 @@
 
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-@isset($total)
-    <p>O valor do juros simples calculado é de {{$total}}</p>
+@isset($montante)
+    <p>O valor do montante calculado é de {{$montante}} reais</p>
+@endisset
+@isset($juros)
+    <p>O valor do juros calculado é de {{$juros}} reais</p>
 @endisset
 @endsection
