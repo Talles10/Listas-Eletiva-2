@@ -8,7 +8,7 @@
         <input type="number" id="dias" name="dias" class="form-control" required="">
     </div>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
+<button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 @isset($dias)
         <p>Numero digitado {{$dias}} dias</p>
