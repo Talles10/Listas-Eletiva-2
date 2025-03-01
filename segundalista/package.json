@@ -2,6 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+<<<<<<< HEAD
         "build": "vite build",
         "dev": "vite"
     },
@@ -12,5 +13,14 @@
         "laravel-vite-plugin": "^1.2.0",
         "tailwindcss": "^4.0.0",
         "vite": "^6.0.11"
+=======
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0.0",
+        "vite": "^5.0.0"
+>>>>>>> fae381b1f1282d56b8e2db036de8135d03b0a7df
     }
 }
